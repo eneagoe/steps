@@ -10,6 +10,7 @@ gem 'pg'
 gem 'puma', '~> 3.11'
 # gem 'rack-cors'
 gem 'rails', '~> 5.2.0'
+gem 'slim-rails'
 gem 'webpacker'
 
 group :development, :test do
