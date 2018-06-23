@@ -44,7 +44,7 @@ RSpec.describe DayLogsController, type: :controller do
   describe '#update' do
     it 'responds with success' do
       patch :update, params: {id: day_log.id, day_log: {steps: 1000}},
-        format: :json
+                     format: :json
 
       expect(response).to be_successful
     end
@@ -53,7 +53,7 @@ RSpec.describe DayLogsController, type: :controller do
       allow_any_instance_of(DayLog).to receive(:update).and_return(false)
 
       patch :update, params: {id: day_log.id, day_log: {steps: 100}},
-        format: :json
+                     format: :json
 
       expect(response).to have_http_status(:unprocessable_entity)
     end

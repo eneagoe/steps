@@ -1,5 +1,6 @@
+# manages daily steps logs
 class DayLogsController < ApplicationController
-  before_action :set_day_log, only: [:show, :update, :destroy]
+  before_action :set_day_log, only: %i[show update destroy]
 
   def index
     @day_logs = DayLog.all

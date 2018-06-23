@@ -1,15 +1,15 @@
 AllCops:
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  ExtraDetails: true
   TargetRubyVersion: 2.5
-  Include:
-    - '**/Gemfile'
-    - '**/Guardfile'
-    - '**/Rakefile'
   Exclude:
     - 'vendor/**/*'
     - 'db/**/*'
     - 'bin/**/*'
     - 'config/**/*'
     - 'db/schema.rb'
+    - 'node_modules/**/*'
 
 Rails:
   Enabled: true
