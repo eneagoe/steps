@@ -27,4 +27,6 @@ html
     meta[name="msapplication-config" content="/browserconfig.xml"]
 
   body
-    = yield
+    main[role='main']
+      = render 'layouts/flash' unless flash.empty?
+      = yield
