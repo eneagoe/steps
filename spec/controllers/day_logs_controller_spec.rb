@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe DayLogsController, type: :controller do
-  let!(:day_log) { create(:day_log) }
   let(:user) { create(:user) }
+  let(:day_log) { create(:day_log, user: user) }
 
   before do
     sign_in(user)
@@ -66,7 +66,7 @@ RSpec.describe DayLogsController, type: :controller do
 
   describe '#destroy' do
     it 'responds with success' do
-      day_log_to_delete = create(:day_log)
+      day_log_to_delete = create(:day_log, user: user)
 
       expect do
         delete :destroy, params: {id: day_log_to_delete}, format: :json
@@ -77,9 +77,10 @@ RSpec.describe DayLogsController, type: :controller do
 
     it 'responds with unprocessable entity if it cannot delete the record' do
       allow_any_instance_of(DayLog).to receive(:destroy).and_return(false)
+      log = create(:day_log, user: user)
 
       expect do
-        delete :destroy, params: {id: day_log.id}, format: :json
+        delete :destroy, params: {id: log.id}, format: :json
       end.to_not(change { DayLog.count })
 
       expect(response).to have_http_status(:unprocessable_entity)

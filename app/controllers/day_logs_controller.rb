@@ -4,14 +4,14 @@ class DayLogsController < ApplicationController
   before_action :set_day_log, only: %i[show update destroy]
 
   def index
-    @day_logs = DayLog.all
+    @day_logs = current_user.day_logs
   end
 
   def show
   end
 
   def create
-    @day_log = DayLog.new(day_log_params)
+    @day_log = current_user.day_logs.new(day_log_params)
 
     if @day_log.save
       render :show, status: :created, location: @day_log
@@ -39,7 +39,7 @@ class DayLogsController < ApplicationController
   private
 
   def set_day_log
-    @day_log = DayLog.find(params[:id])
+    @day_log = current_user.day_logs.find(params[:id])
   end
 
   def day_log_params

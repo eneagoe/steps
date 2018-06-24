@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :day_log do
+    association :user
     steps { rand(0..100_000) }
     taken_on { Faker::Date.between(1.year.ago, Time.zone.today) }
   end
