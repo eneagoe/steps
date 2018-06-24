@@ -17,6 +17,7 @@ require 'selenium/webdriver'
 require 'support/api_helpers'
 require 'support/factory_bot'
 require 'support/json_helpers'
+require 'support/request_spec_helper'
 
 Capybara.register_driver :headless_chrome do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
@@ -47,6 +48,8 @@ Capybara.javascript_driver = :headless_chrome
 
 RSpec.configure do |config|
   config.include Requests::JsonHelpers, type: :request
+  config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include RequestSpecHelper, type: :request
 
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and

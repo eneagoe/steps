@@ -2,6 +2,11 @@ require 'rails_helper'
 
 RSpec.describe DayLogsController, type: :controller do
   let!(:day_log) { create(:day_log) }
+  let(:user) { create(:user) }
+
+  before do
+    sign_in(user)
+  end
 
   describe '#index' do
     it 'returns http success' do
