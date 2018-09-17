@@ -1,0 +1,8 @@
+en:
+  activerecord:
+    errors:
+      models:
+        daily_log:
+          attributes:
+            taken_on:
+              in_the_past: cannot record future data
