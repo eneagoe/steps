@@ -25,3 +25,10 @@ yarn-debug.log*
 
 # ignore temporary test files
 spec/examples.txt
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
