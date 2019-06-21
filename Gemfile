@@ -19,6 +19,7 @@ group :development, :test do
   gem 'bullet'
   gem 'byebug'
   gem 'capybara'
+  gem 'faker'
   gem 'foreman'
   gem 'pry'
   gem 'rspec-rails'
@@ -37,7 +38,6 @@ end
 
 group :test do
   gem 'factory_bot_rails'
-  gem 'faker'
   gem 'guard-rspec'
   gem 'guard-rubocop'
   gem 'launchy'
