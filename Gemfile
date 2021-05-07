@@ -34,7 +34,6 @@ end
 group :development do
   gem 'flamegraph'
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'memory-profiler'
   gem 'rack-mini-profiler', require: false
   gem 'stackprof'
   gem 'web-console'
