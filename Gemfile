@@ -10,7 +10,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'pg'
 gem 'puma'
 # gem 'rack-cors'
-gem 'rails', '~> 6.0'
+gem 'rails', '~> 6.1'
 gem 'slim-rails'
 gem 'webpacker'
 
