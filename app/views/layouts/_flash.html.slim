@@ -1,3 +1,2 @@
 - flash.each do |key, msg|
-    div class="alert alert-#{key}"
-      = content_tag :div, msg, id: "flash_#{key}"
+  = render Common::Flash.new(key: key, message: msg)
