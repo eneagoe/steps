@@ -14,14 +14,24 @@ AllCops:
     - 'config/**/*'
     - 'db/schema.rb'
     - 'node_modules/**/*'
+  NewCops: enable
 
 Rails:
   Enabled: true
 
-DotPosition:
+Layout/DotPosition:
   EnforcedStyle: trailing
 
-ClassAndModuleChildren:
+Layout/LineLength:
+  Max: 80
+  AllowedPatterns: ['^ *#']
+  Exclude:
+    - '**/*.json.jbuilder'
+
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+
+Lint/MissingSuper:
   Enabled: false
 
 Metrics/BlockLength:
@@ -32,26 +42,23 @@ Metrics/BlockLength:
     - 'app/admin/**/*.rb'
     - 'spec/**/*.rb'
 
-Metrics/LineLength:
-  Max: 80
-  IgnoredPatterns: ['^ *#']
-  Exclude:
-    - '**/*.json.jbuilder'
-
-MethodLength:
+Metrics/MethodLength:
   Max: 10
 
 Rails/SkipsModelValidations:
   Enabled: false
 
-SpaceInsideHashLiteralBraces:
-  EnforcedStyle: no_space
-
 Style/BlockComments:
   Enabled: false
 
-Style/FrozenStringLiteralComment:
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Documentation:
   Enabled: false
 
 Style/EmptyMethod:
   EnforcedStyle: expanded
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
