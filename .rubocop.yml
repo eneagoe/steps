@@ -15,6 +15,7 @@ AllCops:
     - 'db/schema.rb'
     - 'node_modules/**/*'
   NewCops: enable
+  SuggestExtensions: false
 
 Rails:
   Enabled: true
