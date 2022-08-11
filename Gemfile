@@ -16,8 +16,8 @@ gem 'webpacker'
 
 group :development, :test do
   gem 'awesome_print'
-  gem 'byebug'
   gem 'capybara'
+  gem 'debug'
   gem 'faker'
   gem 'foreman'
   gem 'pry'
