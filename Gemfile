@@ -11,6 +11,7 @@ gem 'pg'
 gem 'puma'
 gem 'rails', '~> 7.0'
 gem 'slim-rails'
+gem 'turbo-rails'
 gem 'view_component'
 
 group :development, :test do
