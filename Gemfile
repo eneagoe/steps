@@ -12,7 +12,6 @@ gem 'puma'
 gem 'rails', '~> 7.0'
 gem 'slim-rails'
 gem 'view_component'
-gem 'webpacker'
 
 group :development, :test do
   gem 'awesome_print'
