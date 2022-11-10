@@ -5,7 +5,7 @@ RSpec.describe 'Day Logs', type: :request do
 
   describe '#index' do
     it 'lists the user daily logs' do
-      log = create(:day_log, user: user)
+      log = create(:day_log, user:)
       create(:day_log)
 
       sign_in(user)
