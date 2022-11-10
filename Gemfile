@@ -4,13 +4,19 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.2'
 
+gem 'rails', '~> 7.0'
+
+gem "cssbundling-rails", "~> 1.1"
+gem "importmap-rails", "~> 1.1"
+gem "jsbundling-rails", "~> 1.0"
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.5'
 gem 'pg'
 gem 'puma'
-gem 'rails', '~> 7.0'
+gem 'redis'
 gem 'slim-rails'
+gem 'sprockets-rails'
 gem 'turbo-rails'
 gem 'view_component'
 
@@ -46,3 +52,4 @@ group :test do
   gem 'simplecov'
   gem 'terminal-notifier-guard'
 end
+

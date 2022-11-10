@@ -1,6 +1,14 @@
 {
   "dependencies": {
+    "autoprefixer": "^10.4.13",
+    "esbuild": "^0.15.13",
+    "postcss": "^8.4.18",
+    "postcss-cli": "^10.0.0",
+    "postcss-nesting": "^10.2.0"
   },
-  "devDependencies": {
+  "devDependencies": {},
+  "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
+    "build:css": "postcss ./app/assets/stylesheets/application.postcss.css -o ./app/assets/builds/application.css"
   }
 }
