@@ -6,12 +6,12 @@ ruby '3.1.2'
 
 gem 'rails', '~> 7.0'
 
-gem "cssbundling-rails", "~> 1.1"
-gem "importmap-rails", "~> 1.1"
-gem "jsbundling-rails", "~> 1.0"
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'cssbundling-rails', '~> 1.1'
 gem 'devise'
+gem 'importmap-rails', '~> 1.1'
 gem 'jbuilder', '~> 2.5'
+gem 'jsbundling-rails', '~> 1.0'
 gem 'pg'
 gem 'puma'
 gem 'redis'
@@ -52,4 +52,3 @@ group :test do
   gem 'simplecov'
   gem 'terminal-notifier-guard'
 end
-
