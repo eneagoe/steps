@@ -114,7 +114,7 @@ GEM
     flamegraph (0.9.5)
     foreman (0.87.2)
     formatador (1.1.0)
-    globalid (1.0.0)
+    globalid (1.0.1)
       activesupport (>= 5.0)
     guard (2.18.0)
       formatador (>= 0.2.4)
