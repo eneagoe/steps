@@ -6,7 +6,7 @@ namespace :dev do
       records = rand(1..30)
       start_date = Time.zone.yesterday - records.days
       user = User.create! email: Faker::Internet.unique.safe_email,
-                          password: password, password_confirmation: password
+                          password:, password_confirmation: password
       records.times do |i|
         user.day_logs.create! steps: rand(10..15_000),
                               taken_on: start_date + i.days
