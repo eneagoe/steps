@@ -8,3 +8,7 @@ namespace :lint do
     end
   end
 end
+
+Rake::Task['spec'].enhance do
+  Rake::Task['lint:slim'].invoke([:report])
+end
