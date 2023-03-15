@@ -5,7 +5,7 @@ h2
   .field
     = f.label :email
     br
-    = f.email_field :email, autofocus: true, autocomplete: "email"
+    = f.email_field :email, autofocus: true, autocomplete: 'email'
   .field
     = f.label :password
     - if @minimum_password_length
@@ -14,11 +14,11 @@ h2
         = @minimum_password_length
         |  characters minimum)
     br
-    = f.password_field :password, autocomplete: "off"
+    = f.password_field :password, autocomplete: 'off'
   .field
     = f.label :password_confirmation
     br
-    = f.password_field :password_confirmation, autocomplete: "off"
+    = f.password_field :password_confirmation, autocomplete: 'off'
   .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+    = f.submit 'Sign up'
+= render 'devise/shared/links'
