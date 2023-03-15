@@ -40,6 +40,7 @@ group :development do
   gem 'flamegraph'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rack-mini-profiler', require: false
+  gem 'slimcop'
   gem 'stackprof'
   gem 'web-console'
 end
