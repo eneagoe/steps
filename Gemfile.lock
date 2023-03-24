@@ -305,7 +305,7 @@ GEM
     slimcop (0.17.1)
       slimi (>= 0.5.1)
       templatecop
-    slimi (0.7.3)
+    slimi (0.7.4)
       temple
       thor
       tilt
@@ -316,7 +316,7 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    stackprof (0.2.23)
+    stackprof (0.2.24)
     table_print (1.5.7)
     templatecop (0.4.0)
       parallel
